@@ -18,6 +18,26 @@ res = ""
 for i in myString:
     if i.isupper():
         res += i.lower()
-    if i.islower():
+    elif i.islower():
         res += i.upper()
+    else:
+        res += char
 print("This is result using a for loop: " + res)
+
+
+# SOLUTION
+def swap_case(s):
+    res = ""
+    for char in s:
+        if char.isupper():
+            res += char.lower()
+        elif char.islower():
+            res += char.upper()
+        else:
+            res += char         
+    return res
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
