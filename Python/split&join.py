@@ -22,3 +22,16 @@ print(f"This is spilliting variable 'name': Output: {a}") #Output: ['This', 'is'
 # joining
 b = "-".join(a)
 print(f"This is joining variable 'a': Output: {b} ") #Output: This-is-upskilling-in-Python
+
+
+# SOLUTION
+def split_and_join(line):
+    # write your code here
+    line = line.split(" ")
+    line = "-".join(line)
+    return line
+    
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
