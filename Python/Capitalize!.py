@@ -25,7 +25,21 @@ import sys
 
 # Complete the solve function below.
 def solve(s):
-    return s.title()
+    result = ''
+    capitalize = True
+    
+    for char in s:
+        if char == ' ':
+            result = result + char
+            capitalize = True
+        elif capitalize:
+            result = result + char.upper()
+            capitalize = False
+        else:
+            result = result + char
+
+    return result
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
