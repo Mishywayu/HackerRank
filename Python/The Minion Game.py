@@ -39,4 +39,32 @@ def minion(string):
     else:
         print("It's a tie!")
 
-minion("michelle")
+minion("BANANANAAAS")
+
+
+#SOLUTION
+def minion_game(string):
+    # your code goes here
+    n = len(string)
+    
+    #initializing scores
+    kevin_score = 0
+    stuart_score = 0
+    
+    for i in range(n):
+        if string[i].lower() in "aeiou":
+            kevin_score += (n - i)
+        else:
+            stuart_score += (n - i)
+
+    # Print results
+    if kevin_score > stuart_score:
+        print(f"Kevin {kevin_score}")
+    elif kevin_score < stuart_score:
+        print(f"Stuart {stuart_score}")
+    else:
+        print("Draw")
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
